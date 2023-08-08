@@ -1,0 +1,175 @@
+{
+  "hackerone.com": [
+    {
+      "104.16.99.52": [
+        "api.hackerone.com",
+        "www.hackerone.com",
+        [
+          80,
+          443,
+          8080,
+          8443
+        ]
+      ]
+    },
+    {
+      "104.16.100.52": [
+        "api.hackerone.com",
+        "www.hackerone.com"
+      ]
+    },
+    {
+      "162.159.0.31": [
+        "a.ns.hackerone.com",
+        [
+          53,
+          80,
+          443,
+          8080,
+          8443
+        ]
+      ]
+    },
+    {
+      "162.159.1.31": [
+        "b.ns.hackerone.com",
+        [
+          53,
+          80,
+          443,
+          8080,
+          8443
+        ]
+      ]
+    },
+    {
+      "3.233.108.191": [
+        "support.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "34.195.192.142": [
+        "support.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "107.23.58.197": [
+        "support.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "3.212.4.208": [
+        "support.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "52.6.100.97": [
+        "support.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "185.199.109.153": [
+        "mta-sts.managed.hackerone.com",
+        "mta-sts.hackerone.com",
+        "docs.hackerone.com",
+        "mta-sts.forwarding.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "185.199.111.153": [
+        "mta-sts.managed.hackerone.com",
+        "mta-sts.hackerone.com",
+        "docs.hackerone.com",
+        "mta-sts.forwarding.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "185.199.108.153": [
+        "mta-sts.managed.hackerone.com",
+        "mta-sts.hackerone.com",
+        "docs.hackerone.com",
+        "mta-sts.forwarding.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "185.199.110.153": [
+        "mta-sts.managed.hackerone.com",
+        "mta-sts.hackerone.com",
+        "docs.hackerone.com",
+        "mta-sts.forwarding.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "143.204.215.33": [
+        "gslink.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "143.204.215.66": [
+        "gslink.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "143.204.215.57": [
+        "gslink.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    },
+    {
+      "143.204.215.34": [
+        "gslink.hackerone.com",
+        [
+          80,
+          443
+        ]
+      ]
+    }
+  ]
+}

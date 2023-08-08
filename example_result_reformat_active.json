@@ -1,0 +1,234 @@
+[
+  {
+    "active_mode": [
+      {
+        "ip": "104.16.99.52",
+        "hosts": [
+          "api.hackerone.com",
+          "www.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443,
+            8080,
+            8443
+          ]
+        ]
+      },
+      {
+        "ip": "104.16.100.52",
+        "hosts": [
+          "api.hackerone.com",
+          "www.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443,
+            8080,
+            8443
+          ]
+        ]
+      },
+      {
+        "ip": "162.159.0.31",
+        "hosts": [
+          "a.ns.hackerone.com"
+        ],
+        "ports": [
+          [
+            53,
+            80,
+            443,
+            8080,
+            8443
+          ]
+        ]
+      },
+      {
+        "ip": "162.159.1.31",
+        "hosts": [
+          "b.ns.hackerone.com"
+        ],
+        "ports": [
+          [
+            53,
+            80,
+            443,
+            8080,
+            8443
+          ]
+        ]
+      },
+      {
+        "ip": "3.233.108.191",
+        "hosts": [
+          "support.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "52.6.100.97",
+        "hosts": [
+          "support.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "3.212.4.208",
+        "hosts": [
+          "support.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "34.195.192.142",
+        "hosts": [
+          "support.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "107.23.58.197",
+        "hosts": [
+          "support.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "185.199.109.153",
+        "hosts": [
+          "mta-sts.managed.hackerone.com",
+          "mta-sts.hackerone.com",
+          "docs.hackerone.com",
+          "mta-sts.forwarding.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "185.199.108.153",
+        "hosts": [
+          "mta-sts.managed.hackerone.com",
+          "mta-sts.hackerone.com",
+          "docs.hackerone.com",
+          "mta-sts.forwarding.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "185.199.111.153",
+        "hosts": [
+          "mta-sts.managed.hackerone.com",
+          "mta-sts.hackerone.com",
+          "docs.hackerone.com",
+          "mta-sts.forwarding.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "185.199.110.153",
+        "hosts": [
+          "mta-sts.managed.hackerone.com",
+          "mta-sts.hackerone.com",
+          "docs.hackerone.com",
+          "mta-sts.forwarding.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "18.66.233.97",
+        "hosts": [
+          "gslink.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "18.66.233.93",
+        "hosts": [
+          "gslink.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "18.66.233.18",
+        "hosts": [
+          "gslink.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "18.66.233.41",
+        "hosts": [
+          "gslink.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      }
+    ]
+  }
+]

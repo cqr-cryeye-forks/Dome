@@ -1,59 +1,31 @@
 # Config file
 
-
-##############################################################################
-# Virus Total - https://www.virustotal.com/gui/user/<YOUR_USERNAME>/apikey
-############################################################################## 
-
-VIRUSTOTAL=""
+# Virus Total - https://www.virustotal.com/gui/user/AliceTi/apikey
+VIRUSTOTAL="21a8b627347ccaebc5358c707efa15cc4d229a46140c2819408586e6ba372519"
 
 
-
-
-##############################################################################
 # Shodan - https://account.shodan.io/
-############################################################################## 
-
-SHODAN=""
+SHODAN="fwpsFkHzz3dLI8BysZyYQ9CUexcdWVGq"
 
 
-
-##############################################################################
 # CertSpotter - https://sslmate.com/account/api_credentials
-############################################################################## 
-
-CERTSPOTTER="" 
+CERTSPOTTER="11096_3WB7vrm2wLJEE8kDr7mG"
 
 
-
-
-##############################################################################
 # SPYSE - https://spyse.com/user
-############################################################################## 
-
+# SPYSE IS NO LONGER AVAILABLE :(
 SPYSE=""
 
 
-
-##############################################################################
 # SECURITYTRAILS - https://securitytrails.com/app/account/credentials
-############################################################################## 
-
-SECURITYTRAILS=""
-
-
-#############################################################################
-#PASSIVETOTAL - https://community.riskiq.com/settings						   
-############################################################################## 
-
-PASSIVETOTAL_USERNAME=""
-PASSIVETOTAL=""
+SECURITYTRAILS="SGBPOHKGtp2MGnfpvp4ssbVvo4zmy99Y"
 
 
 
+#PASSIVETOTAL - https://community.riskiq.com/settings
+PASSIVETOTAL_USERNAME="123@example.com"
+PASSIVETOTAL="8de041ead0cb0c821a3a7f177688f514f91cbb9abff743ffe484deaa034b8038"
 
-#############################################################################
-#BINARYEDGE - https://app.binaryedge.io/account/api					   
-############################################################################## 
 
-BINARYEDGE=""
+#BINARYEDGE - https://app.binaryedge.io/account/api
+BINARYEDGE="3b328324-51f0-4ebe-8967-b5c873ca6618"

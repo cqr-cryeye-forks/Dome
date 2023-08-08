@@ -1,0 +1,21 @@
+{
+    "hackerone.com": [
+        {
+            "no_ip_because_of_passive_mode": [
+                "a.ns.hackerone.com",
+                "b.ns.hackerone.com",
+                "support.hackerone.com",
+                "links.hackerone.com",
+                "api.hackerone.com",
+                "go.hackerone.com",
+                "info.hackerone.com",
+                "mta-sts.managed.hackerone.com",
+                "mta-sts.hackerone.com",
+                "docs.hackerone.com",
+                "mta-sts.forwarding.hackerone.com",
+                "events.hackerone.com",
+                "gslink.hackerone.com"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "passive_mode": [
+      {
+        "host": "a.ns.hackerone.com"
+      },
+      {
+        "host": "b.ns.hackerone.com"
+      },
+      {
+        "host": "support.hackerone.com"
+      },
+      {
+        "host": "links.hackerone.com"
+      },
+      {
+        "host": "api.hackerone.com"
+      },
+      {
+        "host": "go.hackerone.com"
+      },
+      {
+        "host": "info.hackerone.com"
+      },
+      {
+        "host": "mta-sts.managed.hackerone.com"
+      },
+      {
+        "host": "mta-sts.hackerone.com"
+      },
+      {
+        "host": "docs.hackerone.com"
+      },
+      {
+        "host": "mta-sts.forwarding.hackerone.com"
+      },
+      {
+        "host": "events.hackerone.com"
+      },
+      {
+        "host": "gslink.hackerone.com"
+      }
+    ]
+  }
+]
