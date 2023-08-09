@@ -224,12 +224,12 @@ def brute(domains, entries, option):
         for entry in entries:
             subdomain = entry.strip() + "." + domain
             checkDomain(subdomain)
-            if option == 1:
-                if False:
-                    print('\x1b[1K\r                              ', end='\r')  # clear screen
-                    print('\x1b[1K\r' + subdomain + "        ", end='\r')
-            else:
-                if printOutput: print('\x1b[1K\r' + subdomain + "        ", end='\r')
+            # if option == 1:
+            #     if False:
+            #         print('\x1b[1K\r                              ', end='\r')  # clear screen
+            #         print('\x1b[1K\r' + subdomain + "        ", end='\r')
+            # else:
+            #     if printOutput: print('\x1b[1K\r' + subdomain + "        ", end='\r')
     return
 
 
@@ -285,7 +285,7 @@ def openPorts(ips, ports, timeout):
 
 
 def runWordlistBrute(domains, entries, threads):
-    if printOutputV: print(B + "[!] Bruteforcing with wordlist: " + W + wordlist_name + G)
+    # if printOutputV: print(B + "[!] Bruteforcing with wordlist: " + W + wordlist_name + G)
 
     print("[!] Bruteforcing with wordlist")
     # We split the wordlist in N parts (N = number of threads)
