@@ -217,7 +217,6 @@ def checkDomain(domain):
 
         return True
 
-
 def brute(domains, entries, option):
     # domains can be a list if user input more than one domain or recursively is True
     for domain in domains:
