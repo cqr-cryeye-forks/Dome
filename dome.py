@@ -287,7 +287,7 @@ def openPorts(ips, ports, timeout):
 def runWordlistBrute(domains, entries, threads):
     if printOutputV: print(B + "[!] Bruteforcing with wordlist: " + W + wordlist_name + G)
 
-    print(B + "[!] Bruteforcing with wordlist: " + W + wordlist_name + G)
+    print("[!] Bruteforcing with wordlist")
     # We split the wordlist in N parts (N = number of threads)
 
     x = int(len(entries) / threads) + 1
