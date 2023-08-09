@@ -217,18 +217,14 @@ def checkDomain(domain):
 
         return True
 
+
 def brute(domains, entries, option):
     # domains can be a list if user input more than one domain or recursively is True
     for domain in domains:
         for entry in entries:
             subdomain = entry.strip() + "." + domain
             checkDomain(subdomain)
-            # if option == 1:
-            #     if False:
-            #         print('\x1b[1K\r                              ', end='\r')  # clear screen
-            #         print('\x1b[1K\r' + subdomain + "        ", end='\r')
-            # else:
-            #     if printOutput: print('\x1b[1K\r' + subdomain + "        ", end='\r')
+            print(entry)
     return
 
 
@@ -285,7 +281,6 @@ def openPorts(ips, ports, timeout):
 
 def runWordlistBrute(domains, entries, threads):
     # if printOutputV: print(B + "[!] Bruteforcing with wordlist: " + W + wordlist_name + G)
-
     print("[!] Bruteforcing with wordlist")
     # We split the wordlist in N parts (N = number of threads)
 
@@ -901,6 +896,8 @@ if __name__ == "__main__":
         # wl = open(WORDLIST_PATH, 'r')
         entries = WORDLIST_PATH.read_text().splitlines()
         entries = [line.strip() for line in entries if line]
+        # x= len(entries)
+        # x=1
         # wl.close()
 
         # Before starting the active scan, we test if the domain use wildcard,
