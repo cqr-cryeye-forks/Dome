@@ -670,7 +670,7 @@ def output(output_file, mode_info):
     if printOutput: print(B + "[+] Writing output in " + W + "results folder")
 
     content = subdomains_found
-    final_data = []
+    final_data = {}
     if mode_info == "active":
         new_data = []
         if content:
@@ -701,7 +701,6 @@ def output(output_file, mode_info):
                                 new_data.append({"host": host})
 
         final_data = {"passive_mode": new_data}
-        x=1
 
     root_path = pathlib.Path(__file__).parent
     file_path = root_path.joinpath(output_file)
