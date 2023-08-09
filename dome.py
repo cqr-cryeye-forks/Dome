@@ -23,6 +23,8 @@ from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import wait
 from datetime import datetime
 
+from paths import CONFIG_PATH, WORDLIST_PATH
+
 subdomains_found = {}
 subdomains_found_list = []
 wildcardsDicc = {}
@@ -99,7 +101,7 @@ def parse_args():
     parser.add_argument('-m', '--mode', help="Scan mode. Active or passive", required=True)
     parser.add_argument('-d', '--domain', help="Domains name to enumerate subdomains (Separated by commas)",
                         required=True)
-    parser.add_argument('-w', '--wordlist', help='Wordlist containing subdomain prefix to bruteforce')
+    parser.add_argument('-w', '--wordlist', action='store_true', help='Wordlist containing subdomain prefix to bruteforce')
     parser.add_argument('-p', '--ports', help='Scan the subdomains found against specified tcp ports.')
     parser.add_argument('-i', '--ip', help='When a subdomain is found, show the ip too', action='store_true')
 
@@ -256,30 +258,30 @@ def openPorts(ips, ports, timeout):
                                                                      ip]) + " " + Y + "No open ports")  # If we found the ip, we append the open ports
                     subdomains_found[domain][i][ip].append(port_open)
 
-
-def runPureBrute(domains, threads):
-    charset = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-               'v', 'w', 'x', 'y', 'z']
-
-    entries = []
-
-    for letter1 in charset:
-        entries.append(letter1)
-        for letter2 in charset:
-            entries.append(letter1 + letter2)
-            for letter3 in charset:
-                entries.append(letter1 + letter2 + letter3)
-
-    if printOutputV: print(B + "[!] Bruteforcing from " + W + "a" + B + " to" + W + " zzz: ")
-
-    # We split the wordlist in N parts (N = number of threads)
-    x = int(len(entries) / threads) + 1
-    splited_list = [entries[i:i + x] for i in range(0, len(entries), x)]
-    # splited_list = np.array_split(entries, threads)
-
-    executor = ThreadPoolExecutor(max_workers=threads)
-    futures = [executor.submit(brute, domains, splited_list[i], 1) for i in range(len(splited_list))]
-    wait(futures)
+# I'm not using PureBrute because we have huge wordlist for runWordlistBrute, it's more effective.
+# def runPureBrute(domains, threads):
+#     charset = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+#                'v', 'w', 'x', 'y', 'z']
+#
+#     entries = []
+#
+#     for letter1 in charset:
+#         entries.append(letter1)
+#         for letter2 in charset:
+#             entries.append(letter1 + letter2)
+#             for letter3 in charset:
+#                 entries.append(letter1 + letter2 + letter3)
+#
+#     if printOutputV: print(B + "[!] Bruteforcing from " + W + "a" + B + " to" + W + " zzz: ")
+#
+#     # We split the wordlist in N parts (N = number of threads)
+#     x = int(len(entries) / threads) + 1
+#     splited_list = [entries[i:i + x] for i in range(0, len(entries), x)]
+#     # splited_list = np.array_split(entries, threads)
+#
+#     executor = ThreadPoolExecutor(max_workers=threads)
+#     futures = [executor.submit(brute, domains, splited_list[i], 1) for i in range(len(splited_list))]
+#     wait(futures)
 
 
 def runWordlistBrute(domains, entries, threads):
@@ -628,7 +630,7 @@ def runPassive(domains):
 
 def runActive(domains, entries, threads, no_bruteforce):
     if printOutput: print(B + "\n[+] Running active mode: ")
-    if not no_bruteforce: runPureBrute(domains, threads)
+    # if not no_bruteforce: runPureBrute(domains, threads)
     if len(entries) > 0:
         runWordlistBrute(domains, entries, threads)
     else:
@@ -707,20 +709,21 @@ def output(output_file, mode_info):
     file_path.write_text(json.dumps(final_data))
 
 
-
 def importApis():
-    if not os.path.exists('config.api'):
+    if not CONFIG_PATH.exists():
         if printOutput: print(Y + "\n[!] File config.api not found in current directory")
         return
+    else:
+        print("Config file found")
 
-    with open("config.api", "r") as file:
-        for line in file.readlines():
-            if not line.startswith('#'):  # Delete comments
-                line = line.strip()
-                if line != '':  # Delete empty lines
-                    line.split("=")
-                    if line.split("=")[1] != '""':  # If api
-                        apis[line.split("=")[0]] = line.split("=")[1].replace('"', '')
+    config_file = CONFIG_PATH.read_text()
+    for line in config_file.splitlines():
+        if not line.startswith('#'):  # Delete comments
+            line = line.strip()
+            if line != '':  # Delete empty lines
+                line.split("=")
+                if line.split("=")[1] != '""':  # If api
+                    apis[line.split("=")[0]] = line.split("=")[1].replace('"', '')
 
 
 if __name__ == "__main__":
@@ -759,7 +762,7 @@ if __name__ == "__main__":
         print(R + "[-] No internet connection.")
         exit()
 
-    wordlist_name = args.wordlist
+    wordlist_name = WORDLIST_PATH
     if wordlist_name:
         if not os.path.exists(wordlist_name):
             print(
@@ -894,11 +897,11 @@ if __name__ == "__main__":
 
     elif mode.lower() == "active":
 
-        entries = []
-        if args.wordlist:
-            wl = open(args.wordlist, 'r')
-            entries = wl.readlines()
-            wl.close()
+
+        # wl = open(WORDLIST_PATH, 'r')
+        entries = WORDLIST_PATH.read_text().splitlines()
+        entries = [line.strip() for line in entries if line]
+        # wl.close()
 
         # Before starting the active scan, we test if the domain use wildcard,
         checkWildcard(domains)

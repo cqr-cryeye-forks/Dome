@@ -86,7 +86,7 @@
         ]
       },
       {
-        "ip": "3.212.4.208",
+        "ip": "107.23.58.197",
         "hosts": [
           "support.hackerone.com"
         ],
@@ -110,24 +110,9 @@
         ]
       },
       {
-        "ip": "107.23.58.197",
+        "ip": "3.212.4.208",
         "hosts": [
           "support.hackerone.com"
-        ],
-        "ports": [
-          [
-            80,
-            443
-          ]
-        ]
-      },
-      {
-        "ip": "185.199.109.153",
-        "hosts": [
-          "mta-sts.managed.hackerone.com",
-          "mta-sts.hackerone.com",
-          "docs.hackerone.com",
-          "mta-sts.forwarding.hackerone.com"
         ],
         "ports": [
           [
@@ -152,7 +137,7 @@
         ]
       },
       {
-        "ip": "185.199.111.153",
+        "ip": "185.199.109.153",
         "hosts": [
           "mta-sts.managed.hackerone.com",
           "mta-sts.hackerone.com",
@@ -182,7 +167,22 @@
         ]
       },
       {
-        "ip": "18.66.233.97",
+        "ip": "185.199.111.153",
+        "hosts": [
+          "mta-sts.managed.hackerone.com",
+          "mta-sts.hackerone.com",
+          "docs.hackerone.com",
+          "mta-sts.forwarding.hackerone.com"
+        ],
+        "ports": [
+          [
+            80,
+            443
+          ]
+        ]
+      },
+      {
+        "ip": "143.204.215.57",
         "hosts": [
           "gslink.hackerone.com"
         ],
@@ -194,7 +194,7 @@
         ]
       },
       {
-        "ip": "18.66.233.93",
+        "ip": "143.204.215.33",
         "hosts": [
           "gslink.hackerone.com"
         ],
@@ -206,7 +206,7 @@
         ]
       },
       {
-        "ip": "18.66.233.18",
+        "ip": "143.204.215.66",
         "hosts": [
           "gslink.hackerone.com"
         ],
@@ -218,7 +218,7 @@
         ]
       },
       {
-        "ip": "18.66.233.41",
+        "ip": "143.204.215.34",
         "hosts": [
           "gslink.hackerone.com"
         ],
