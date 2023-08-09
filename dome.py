@@ -688,7 +688,7 @@ def output(output_file, mode_info):
                     }
                     new_data.append(new_entry)
 
-        final_data = [{"active_mode": new_data}]
+        final_data = {"active_mode": new_data}
 
     elif mode_info == "passive":
         new_data = []
@@ -700,7 +700,7 @@ def output(output_file, mode_info):
                             for host in hosts:
                                 new_data.append({"host": host})
 
-        final_data = [{"passive_mode": new_data}]
+        final_data = {"passive_mode": new_data}
         x=1
 
     root_path = pathlib.Path(__file__).parent
