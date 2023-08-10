@@ -678,6 +678,9 @@ def output(output_file, mode_info):
                     hosts = [item for item in value if not isinstance(item, list)]
                     ports = [item for item in value if isinstance(item, list)]
 
+                    if ports:
+                        ports = ports[0]
+
                     new_entry = {
                         "ip": sub_key,
                         "hosts": hosts,
